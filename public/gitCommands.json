@@ -16,7 +16,7 @@
       "use": "setup"
     },
     { "key": "git  help", "command": "Help", "use": "help" },
-    { "key": "git : git  init", "command": "Initialize", "use": "general" },
+    { "key": "git initialize", "command": "git  init", "use": "general" },
     {
       "key": "git  add .",
       "command": "Get everything ready to commit",

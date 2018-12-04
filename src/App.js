@@ -126,32 +126,32 @@ class App extends Component {
                 </span>
               </p>
               <div className="buttonsStyle is-grouped has-text-centered">
-                {this.state.source == "data" ? (
+                {this.state.source === "data" ? (
                   <button
                     onClick={this.setDataToGit}
-                    className="button is-link is-outlined"
+                    className="button is-link is-medium is-outlined"
                   >
                     Git commands
                   </button>
                 ) : (
                   <button
                     onClick={this.setDataToGit}
-                    className="button is-link is-active"
+                    className="button is-link is-medium is-active"
                   >
                     Git commands
                   </button>
                 )}
-                {this.state.source == 'data'? 
+                {this.state.source === 'data'? 
               <button
               onClick={this.setDataToVS}
-              className="button is-link is-active"
+              className="button is-link is-active is-medium"
             >
               VS Code shortcuts
             </button>
             :
             <button
                   onClick={this.setDataToVS}
-                  className="button is-link is-outlined"
+                  className="button is-link is-outlined is-medium"
                 >
                   VS Code shortcuts
                 </button>  
