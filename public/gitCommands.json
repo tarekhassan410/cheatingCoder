@@ -1,0 +1,788 @@
+{
+  "commandsData": [
+    {
+      "key": "which git",
+      "command": "See where git  is located",
+      "use": "setup"
+    },
+    {
+      "key": "git  --version",
+      "command": "Get the version of git ",
+      "use": "setup"
+    },
+    {
+      "key": "git  status",
+      "command": "Create an alias (shortcut) for",
+      "use": "setup"
+    },
+    { "key": "git  help", "command": "Help", "use": "help" },
+    { "key": "git : git  init", "command": "Initialize", "use": "general" },
+    {
+      "key": "git  add .",
+      "command": "Get everything ready to commit",
+      "use": "general"
+    },
+    {
+      "key": "git  add index.html",
+      "command": "Get custom file ready to commit",
+      "use": "general"
+    },
+    {
+      "key": "git  commit -m \"Message\"",
+      "command": "Commit changes",
+      "use": "general"
+    },
+    {
+      "key": "git  commit -m \"Title\" -m \"Description...\"",
+      "command": "Commit changes with title and description",
+      "use": "general"
+    },
+    {
+      "key": "git  commit -am \"Message\"",
+      "command": "Add and commit in one step",
+      "use": "general"
+    },
+    {
+      "key": "git : git  rm index.html",
+      "command": "Remove files from",
+      "use": "general"
+    },
+    {
+      "key": "git  add -u",
+      "command": "Update all changes",
+      "use": "general"
+    },
+    {
+      "key": "git  rm --cached index.html",
+      "command": "Remove file but do not track anymore",
+      "use": "general"
+    },
+    {
+      "key": "git  mv index.html dir/index_new.html",
+      "command": "Move or rename files",
+      "use": "general"
+    },
+    {
+      "key": "git  checkout -- index.html",
+      "command": "Undo modifications (restore files from latest commited version)",
+      "use": "general"
+    },
+    {
+      "key": "git  checkout 6eb715d -- index.html",
+      "command": "Restore file from a custom commit (in current branch)",
+      "use": "general"
+    },
+    {
+      "key": "git  revert 073791e7dd71b90daa853b2c5acc2c925f02dbc6",
+      "command": "Go back to commit",
+      "use": "reset"
+    },
+    {
+      "key": "git  reset --soft 073791e7dd71b90daa853b2c5acc2c925f02dbc6",
+      "command": "Soft reset (move HEAD only; neither staging nor working dir is changed)",
+      "use": "reset"
+    },
+    {
+      "key": "git  reset --soft HEAD~",
+      "command": "Undo latest commit",
+      "use": "reset"
+    },
+    {
+      "key": "git  reset --mixed 073791e7dd71b90daa853b2c5acc2c925f02dbc6",
+      "command": "Mixed reset (move HEAD and change staging to match repo; does not affect working dir)",
+      "use": "reset"
+    },
+    {
+      "key": "git  reset --hard 073791e7dd71b90daa853b2c5acc2c925f02dbc6",
+      "command": "Hard reset (move HEAD and change staging dir and working dir to match repo)",
+      "use": "reset"
+    },
+    {
+      "key": "git  clean -n",
+      "command": "Test-Delete untracked files",
+      "use": "update & delete"
+    },
+    {
+      "key": "git  clean -f",
+      "command": "Delete untracked files (not staging)",
+      "use": "update & delete"
+    },
+    {
+      "key": "git  reset HEAD index.html",
+      "command": "Unstage (undo adds)",
+      "use": "update & delete"
+    },
+    {
+      "key": "git  commit --amend -m \"New Message\"",
+      "command": "Update most recent commit (also update the commit message)",
+      "use": "update & delete"
+    },
+    { "key": "git  branch", "command": "Show branches", "use": "branch" },
+    {
+      "key": "git  branch branchname",
+      "command": "Create branch",
+      "use": "branch"
+    },
+    {
+      "key": "git  checkout branchname",
+      "command": "Change to branch",
+      "use": "branch"
+    },
+    {
+      "key": "git  checkout -b branchname",
+      "command": "Create and change to new branch",
+      "use": "branch"
+    },
+    {
+      "key": "git  branch -m branchname new_branchname or: git  branch --move branchname new_branchname",
+      "command": "Rename branch",
+      "use": "branch"
+    },
+    {
+      "key": "git  branch --merged",
+      "command": "Show all completely merged branches with current branch",
+      "use": "branch"
+    },
+    {
+      "key": "git  branch -d branchname or: git  branch --delete branchname",
+      "command": "Delete merged branch (only possible if not HEAD)",
+      "use": "branch"
+    },
+    {
+      "key": "git  branch -D branch_to_delete",
+      "command": "Delete not merged branch",
+      "use": "branch"
+    },
+    {
+      "key": "git  merge branchname",
+      "command": "True merge (fast forward)",
+      "use": "merge"
+    },
+    {
+      "key": "git  merge --ff-only branchname",
+      "command": "Merge to master (only if fast forward)",
+      "use": "merge"
+    },
+    {
+      "key": "git  merge --no-ff branchname",
+      "command": "Merge to master (force a new commit)",
+      "use": "merge"
+    },
+    {
+      "key": "git  merge --abort",
+      "command": "Stop merge (in case of conflicts)",
+      "use": "merge"
+    },
+    {
+      "key": "git  reset --merge // prior to v1.7.4",
+      "command": "Stop merge (in case of conflicts)",
+      "use": "merge"
+    },
+    {
+      "key": "git  cherry-pick 073791e7",
+      "command": "Merge only one specific commit",
+      "use": "merge"
+    },
+    {
+      "key": "\"git checkout branchname » git rebase master or: git merge master branchname (The rebase moves all of the commits in master onto the tip of branchname.)\"",
+      "command": "Rebase",
+      "use": "merge"
+    },
+    {
+      "key": "git  rebase --abort",
+      "command": "Cancel rebase",
+      "use": "merge"
+    },
+    {
+      "key": "git  rebase -i HEAD~3 (source)",
+      "command": "Squash multiple commits into one",
+      "use": "Merge"
+    },
+    {
+      "key": "git  stash save \"Message\"",
+      "command": "Put in stash",
+      "use": "stash"
+    },
+    { "key": "git  stash list", "command": "Show stash", "use": "stash" },
+    {
+      "key": "git  stash show stash@{0}",
+      "command": "Show stash stats",
+      "use": "stash"
+    },
+    {
+      "key": "git  stash show -p stash@{0}",
+      "command": "Show stash changes",
+      "use": "stash"
+    },
+    {
+      "key": "git  stash pop stash@{0}",
+      "command": "Use custom stash item and drop it",
+      "use": "stash"
+    },
+    {
+      "key": "git  stash apply stash@{0}",
+      "command": "Use custom stash item and do not drop it",
+      "use": "stash"
+    },
+    {
+      "key": "git  stash drop stash@{0}",
+      "command": "Delete custom stash item",
+      "use": "stash"
+    },
+    {
+      "key": "git  stash clear",
+      "command": "Delete complete stash",
+      "use": "stash"
+    },
+    {
+      "key": "nano .gitignore",
+      "command": "Add or edit gitignore",
+      "use": "gitignore and gitkeep"
+    },
+    {
+      "key": "git keep",
+      "command": "Track empty dir: touch dir/.",
+      "use": "gitignore and gitkeep"
+    },
+    { "key": "git  log", "command": "Show commits", "use": "log" },
+    {
+      "key": "git  log --oneline",
+      "command": "Show oneline-summary of commits",
+      "use": "log"
+    },
+    {
+      "key": "git  log --format=oneline",
+      "command": "Show oneline-summary of commits with full SHA-1",
+      "use": "log"
+    },
+    {
+      "key": "git  log --oneline -3",
+      "command": "Show oneline-summary of the last three commits",
+      "use": "log"
+    },
+    {
+      "key": "git log --author=\"Sven\" git log --grep=\"Message\" git log --until=2013-01-01 git log --since=2013-01-01",
+      "command": "Show only custom commits",
+      "use": "log"
+    },
+    {
+      "key": "git log --format=short git log --format=full git log --format=fuller git log --format=email git log --format=raw",
+      "command": "Show only custom data of commit",
+      "use": "log"
+    },
+    { "key": "git  log -p", "command": "Show changes", "use": "log" },
+    {
+      "key": "git  log 6eb715d.. index.html",
+      "command": "Show every commit since special commit for custom file only",
+      "use": "log"
+    },
+    {
+      "key": "git  log -p 6eb715d.. index.html",
+      "command": "Show changes of every commit since special commit for custom file only",
+      "use": "log"
+    },
+    {
+      "key": "git  log --stat --summary",
+      "command": "Show stats and summary of commits",
+      "use": "log"
+    },
+    {
+      "key": "git  log --graph",
+      "command": "Show history of commits as graph",
+      "use": "log"
+    },
+    {
+      "key": "git  log --oneline --graph --all --decorate",
+      "command": "Show history of commits as graph-summary",
+      "use": "log"
+    },
+    {
+      "key": "git  diff",
+      "command": "Compare modified files",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --color-words index.html",
+      "command": "Compare modified files and highlight changes only",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --staged",
+      "command": "Compare modified files within the staging area",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff master..branchname",
+      "command": "Compare branches",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --color-words master..branchname^",
+      "command": "Compare branches like above",
+      "use": "compare"
+    },
+    {
+      "key": "git diff 6eb715d git diff 6eb715d..HEAD git diff 6eb715d..537a09f",
+      "command": "Compare commits",
+      "use": "compare"
+    },
+    {
+      "key": "git diff 6eb715d index.html git diff 6eb715d..537a09f index.html",
+      "command": "Compare commits of file",
+      "use": "compare"
+    },
+    {
+      "key": "git diff -b 6eb715d..HEAD or: git diff --ignore-space-change 6eb715d..HEAD",
+      "command": "Compare without caring about spaces",
+      "use": "compare"
+    },
+    {
+      "key": "git diff -w 6eb715d..HEAD or: git diff --ignore-all-space 6eb715d..HEAD",
+      "command": "Compare without caring about all spaces",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --stat --summary 6eb715d..HEAD",
+      "command": "Useful comparings",
+      "use": "compare"
+    },
+    {
+      "key": "git  blame -L10,+1 index.html",
+      "command": "Blame",
+      "use": "compare"
+    },
+    {
+      "key": "git  tag",
+      "command": "Show all released versions",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  tag -l -n1",
+      "command": "Show all released versions with comments",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  tag v1.0.0",
+      "command": "Create release version",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  tag -a v1.0.0 -m 'Message'",
+      "command": "Create release version with comment",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  checkout v1.0.0",
+      "command": "Checkout a specific release version",
+      "use": "Releases & Version Tags"
+    },
+    { "key": "git  remote", "command": "Show remote", "use": "Collaborate" },
+    {
+      "key": "git  remote -v",
+      "command": "Show remote details",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git remote add upstream https://github.com/user/project.git",
+      "command": "Add remote upstream from GitHub project",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git remote add upstream ssh://root@123.123.123.123/path/to/repository/.git",
+      "command": "Add remote upstream from existing empty project on server",
+      "use": "Collaborate"
+    },
+    { "key": "git  fetch upstream", "command": "Fetch", "use": "Collaborate" },
+    {
+      "key": "git  fetch upstream branchname:local_branchname",
+      "command": "Fetch a custom branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  merge upstream/master",
+      "command": "Merge fetched commits",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  remote rm origin",
+      "command": "Remove origin",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  branch -r",
+      "command": "Show remote branches",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  branch -a",
+      "command": "Show all branches",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  checkout -b local_branchname upstream/remote_branchname",
+      "command": "Create and checkout branch from a remote branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  diff origin/master..master",
+      "command": "Compare",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push -u origin master",
+      "command": "Push (set default with -u)",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push origin master",
+      "command": "Push",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push origin master --force",
+      "command": "Force-Push: `",
+      "use": "Collaborate"
+    },
+    { "key": "git  pull", "command": "Pull", "use": "Collaborate" },
+    {
+      "key": "git  pull origin branchname",
+      "command": "Pull specific branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  fetch upstream pull/ID/head:new-pr-branch",
+      "command": "Fetch a pull request on GitHub by its ID and create a new branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone https://github.com/user/project.git or: git clone ssh://user@domain.com/~/dir/.git",
+      "command": "Clone to localhost",
+      "use": "Collaborate"
+    },
+    {
+      "key": "\"git clone https://github.com/user/project.git ~/dir/folder\"",
+      "command": "Clone to localhost folder",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone -b branchname https://github.com/user/project.git",
+      "command": "Clone specific branch to localhost",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git push origin :branchname or: git push origin --delete branchname",
+      "command": "Delete remote branch (push nothing)",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  archive --format zip --output filename.zip master",
+      "command": "Create a zip-archive",
+      "use": "Archive"
+    },
+    {
+      "key": "git  log --author=sven --all > log.txt",
+      "command": "Export/write custom log to a file",
+      "use": "Archive"
+    },
+    {
+      "key": "git  log -p 6eb715d.. index.html",
+      "command": "Show changes of every commit since special commit for custom file only",
+      "use": "log"
+    },
+    {
+      "key": "git  log --stat --summary",
+      "command": "Show stats and summary of commits",
+      "use": "log"
+    },
+    {
+      "key": "git  log --graph",
+      "command": "Show history of commits as graph",
+      "use": "log"
+    },
+    {
+      "key": "git  log --oneline --graph --all --decorate",
+      "command": "Show history of commits as graph-summary",
+      "use": "log"
+    },
+    {
+      "key": "git  diff",
+      "command": "Compare modified files",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --color-words index.html",
+      "command": "Compare modified files and highlight changes only",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --staged",
+      "command": "Compare modified files within the staging area",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff master..branchname",
+      "command": "Compare branches",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --color-words master..branchname^",
+      "command": "Compare branches like above",
+      "use": "compare"
+    },
+    {
+      "key": "\"git diff 6eb715d git diff 6eb715d..HEAD git diff 6eb715d..537a09f\"",
+      "command": "Compare commits",
+      "use": "compare"
+    },
+    {
+      "key": "git diff 6eb715d index.html git diff 6eb715d..537a09f index.html",
+      "command": "Compare commits of file",
+      "use": "compare"
+    },
+    {
+      "key": "git diff -b 6eb715d..HEAD or: git diff --ignore-space-change 6eb715d..HEAD",
+      "command": "Compare without caring about spaces",
+      "use": "compare"
+    },
+    {
+      "key": "\"git diff -w 6eb715d..HEAD or: git diff --ignore-all-space 6eb715d..HEAD\"",
+      "command": "Compare without caring about all spaces",
+      "use": "compare"
+    },
+    {
+      "key": "git  diff --stat --summary 6eb715d..HEAD",
+      "command": "Useful comparings",
+      "use": "compare"
+    },
+    {
+      "key": "git  blame -L10,+1 index.html",
+      "command": "Blame",
+      "use": "compare"
+    },
+    {
+      "key": "git  tag",
+      "command": "Show all released versions",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  tag -l -n1",
+      "command": "Show all released versions with comments",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  tag v1.0.0",
+      "command": "Create release version",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  tag -a v1.0.0 -m 'Message'",
+      "command": "Create release version with comment",
+      "use": "Releases & Version Tags"
+    },
+    {
+      "key": "git  checkout v1.0.0",
+      "command": "Checkout a specific release version",
+      "use": "Releases & Version Tags"
+    },
+    { "key": "git  remote", "command": "Show remote", "use": "Collaborate" },
+    {
+      "key": "git  remote -v",
+      "command": "Show remote details",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git remote add upstream https://github.com/user/project.git",
+      "command": "Add remote upstream from github project",
+      "use": "Collaborate"
+    },
+    {
+      "key": "\"git remote add upstream ssh://root@123.123.123.123/path/to/repository/.git\"",
+      "command": "Add remote upstream from existing empty project on server",
+      "use": "Collaborate"
+    },
+    { "key": "git  fetch upstream", "command": "Fetch", "use": "Collaborate" },
+    {
+      "key": "git  fetch upstream branchname:local_branchname",
+      "command": "Fetch a custom branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  merge upstream/master",
+      "command": "Merge fetched commits",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  remote rm origin",
+      "command": "Remove origin",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  branch -r",
+      "command": "Show remote branches",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  branch -a",
+      "command": "Show all branches",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  checkout -b local_branchname upstream/remote_branchname",
+      "command": "Create and checkout branch from a remote branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  diff origin/master..master",
+      "command": "Compare",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push -u origin master",
+      "command": "Push (set default with -u)",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push origin master",
+      "command": "Push",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push origin master --force",
+      "command": "Force-Push: `",
+      "use": "Collaborate"
+    },
+    { "key": "git  pull", "command": "Pull", "use": "Collaborate" },
+    {
+      "key": "git  pull origin branchname",
+      "command": "Pull specific branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git fetch upstream pull/ID/head:new-pr-branch",
+      "command": "Fetch a pull request on GitHub by its ID and create a new branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone https://github.com/user/project.git or: git clone ssh://user@domain.com/~/dir/.git",
+      "command": "Clone to localhost",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone https://github.com/user/project.git ~/dir/folder",
+      "command": "Clone to localhost folder",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone -b branchname https://github.com/user/project.git",
+      "command": "Clone specific branch to localhost",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git push origin :branchname or: git push origin --delete branchname",
+      "command": "Delete remote branch (push nothing)",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  archive --format zip --output filename.zip master",
+      "command": "Create a zip-archive",
+      "use": "Archive"
+    },
+    {
+      "key": "git  log --author=sven --all > log.txt",
+      "command": "Export/write custom log to a file",
+      "use": "Archive"
+    },
+    { "key": "git  fetch upstream", "command": "Fetch", "use": "Collaborate" },
+    {
+      "key": "git  fetch upstream branchname:local_branchname",
+      "command": "Fetch a custom branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  merge upstream/master",
+      "command": "Merge fetched commits",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  remote rm origin",
+      "command": "Remove origin",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  branch -r",
+      "command": "Show remote branches",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  branch -a",
+      "command": "Show all branches",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  checkout -b local_branchname upstream/remote_branchname",
+      "command": "Create and checkout branch from a remote branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  diff origin/master..master",
+      "command": "Compare",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push -u origin master",
+      "command": "Push (set default with -u)",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push origin master",
+      "command": "Push",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  push origin master --force",
+      "command": "Force-Push: `",
+      "use": "Collaborate"
+    },
+    { "key": "git  pull", "command": "Pull", "use": "Collaborate" },
+    {
+      "key": "git  pull origin branchname",
+      "command": "Pull specific branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git fetch upstream pull/ID/head:new-pr-branch",
+      "command": "Fetch a pull request on GitHub by its ID and create a new branch",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone https://github.com/user/project.git or: git clone ssh://user@domain.com/~/dir/.git",
+      "command": "Clone to localhost",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone https://github.com/user/project.git ~/dir/folder",
+      "command": "Clone to localhost folder",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git clone -b branchname https://github.com/user/project.git",
+      "command": "Clone specific branch to localhost",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git push origin :branchname or: git push origin --delete branchname",
+      "command": "Delete remote branch (push nothing)",
+      "use": "Collaborate"
+    },
+    {
+      "key": "git  archive --format zip --output filename.zip master",
+      "command": "Create a zip-archive",
+      "use": "Archive"
+    },
+    {
+      "key": "git  log --author=sven --all > log.txt",
+      "command": "Export/write custom log to a file",
+      "use": "Archive"
+    }
+  ]
+}
