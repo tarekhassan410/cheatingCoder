@@ -75,7 +75,7 @@ class App extends Component {
 
     return (
       <div>
-        <div className="hero section is-medium is-primary is-bold">
+        <div className="hero section is-small is-primary is-bold">
           <div className="container has-text-centered">
             <div className="title has-text-dark is-size-1">
               Cheating coder
@@ -117,7 +117,7 @@ class App extends Component {
               <p className="control has-icons-left has-icons-right">
                 <input
                   onChange={this.filterList}
-                  className="input is-primary is-radiusless is-medium"
+                  className="input is-primary is-medium is-rounded"
                   type="email"
                   placeholder="Search commands 'Cut', 'Copy', 'Delete, 'Toggle' etc "
                 />
@@ -129,14 +129,14 @@ class App extends Component {
                 {this.state.source == "data" ? (
                   <button
                     onClick={this.setDataToGit}
-                    className="button is-link is-outlined is-radiusless"
+                    className="button is-link is-outlined"
                   >
                     Git commands
                   </button>
                 ) : (
                   <button
                     onClick={this.setDataToGit}
-                    className="button is-link  is-active is-radiusless"
+                    className="button is-link is-active"
                   >
                     Git commands
                   </button>
@@ -144,14 +144,14 @@ class App extends Component {
                 {this.state.source == 'data'? 
               <button
               onClick={this.setDataToVS}
-              className="button is-link  is-active is-outlined is-radiusless"
+              className="button is-link is-active"
             >
               VS Code shortcuts
             </button>
             :
             <button
                   onClick={this.setDataToVS}
-                  className="button is-link is-outlined is-radiusless"
+                  className="button is-link is-outlined"
                 >
                   VS Code shortcuts
                 </button>  
