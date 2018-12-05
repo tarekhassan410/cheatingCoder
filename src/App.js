@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import "./bulma_theme.css";
 import axios from "axios";
 import "./index.css";
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 class App extends Component {
   state = {
     shortcuts: [],
     source: "gitCommands",
-    value: null
+    value: null,
   };
 
   constructor() {
@@ -170,15 +171,15 @@ class App extends Component {
             <table className="table is-fullwidth is-striped is-hoverable">
               <thead>
                 <tr>
-                  <th className="is-size-4">Command</th>
-                  <th className="is-size-4">Key</th>
+                  <th className="is-size-4 command">Command</th>
+                  <th className="is-size-4 key">Key</th>
                 </tr>
               </thead>
               <tbody>
                 {list.map((s, i) => (
                   <tr key={i}>
-                    <td>{s.command}</td>
-                    <td>{s.key}</td>
+                    <td class="command">{s.command}</td>
+                    <td class="key">{s.key}</td>
                   </tr>
                 ))}
               </tbody>
