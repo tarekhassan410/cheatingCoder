@@ -6,6 +6,10 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(359deg); } }
+@font-face {
+  font-family: 'bitwise';
+  src: local('bitwise'), url('/src/bitwise.ttf') format('truetype');
+}
 
 .delete, .modal-close, .is-unselectable, .button, .file, .breadcrumb, .pagination-previous,
 .pagination-next,
@@ -237,8 +241,7 @@ table {
 
 td,
 th {
-  padding: 0;
-  text-align: left; }
+  padding: 0;}
 
 html {
   background-color: white;
@@ -339,10 +342,15 @@ pre {
 table td,
 table th {
   text-align: left;
-  vertical-align: top; }
+  vertical-align: top;
+}
 
 table th {
   color: #363636; }
+
+table tbody td {
+  word-break: break-word;
+}
 
 .is-clearfix::after {
   clear: both;
@@ -476,7 +484,8 @@ table th {
     font-size: 0.75rem !important; } }
 
 .has-text-centered {
-  text-align: center !important; }
+  text-align: center !important;
+  margin-top: 1.5em }
 
 .has-text-justified {
   text-align: justify !important; }
@@ -1475,9 +1484,9 @@ a.box:active {
       .button.is-link:focus:not(:active), .button.is-link.is-focused:not(:active) {
         box-shadow: 0 0 0 0.125em rgba(69, 130, 236, 0.25); }
     .button.is-link:active, .button.is-link.is-active {
-      background-color: #2e72ea;
+      background-color: #d9dee2;
       border-color: transparent;
-      color: #fff; }
+      color: #363636; }
     .button.is-link[disabled] {
       background-color: #4582EC;
       border-color: transparent;
@@ -1496,11 +1505,11 @@ a.box:active {
       border-color: transparent transparent #fff #fff !important; }
     .button.is-link.is-outlined {
       background-color: transparent;
-      border-color: #4582EC;
-      color: #4582EC; }
+      border-color: #363636;
+      color: #363636; }
       .button.is-link.is-outlined:hover, .button.is-link.is-outlined:focus {
-        background-color: #4582EC;
-        border-color: #4582EC;
+        background-color: #363636;
+        border-color: #363636;
         color: #fff; }
       .button.is-link.is-outlined.is-loading::after {
         border-color: transparent transparent #4582EC #4582EC !important; }
@@ -3231,9 +3240,12 @@ a.box:active {
   .table.is-hoverable tbody tr:not(.is-selected):hover {
     background-color: #fafafa; }
   .table.is-hoverable.is-striped tbody tr:not(.is-selected):hover {
-    background-color: #fafafa; }
+    background-color: #52ADD6;
+    color: #fff;
+    font-weight: 700; }
     .table.is-hoverable.is-striped tbody tr:not(.is-selected):hover:nth-child(even) {
-      background-color: whitesmoke; }
+      color: #fff;
+      background-color: #52ADD6; }
   .table.is-narrow td,
   .table.is-narrow th {
     padding: 0.25em 0.5em; }
@@ -6770,7 +6782,8 @@ a {
 .button {
   padding-left: 1em;
   padding-right: 1em;
-  border-radius: 50px; }
+  border-radius: 50px;
+  margin: 0.5em }
   .button.is-small {
     border-radius: 40px;
     font-size: 0.85rem; }
