@@ -17,3 +17,20 @@ code {
   text-align: center;
   margin-top: 10px;
 }
+
+div.is-grouped span{
+  margin: 0em 0.5em 0em 0.5em;
+}
+
+.command {
+  text-align: left !important;
+}
+
+.key {
+  text-align: right !important;
+}
+
+td.key{
+  border-left: 0.1em solid #54ABD7 !important;
+}
+
