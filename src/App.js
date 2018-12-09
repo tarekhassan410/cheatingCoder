@@ -77,9 +77,7 @@ class App extends Component {
       <div>
         <div className="hero section is-small is-primary is-bold">
           <div className="container has-text-centered">
-            <div className="title has-text-dark is-size-1">
-              Cheating coder
-            </div>
+            <div className="title has-text-dark is-size-1">Cheating coder</div>
             <div className="subtitle has-text-dark is-size-5">
               Search and learn Git commands and VS Code shortcuts <br />
               <span className="subtitle has-text-grey-dark is-size-7 has-text-centered">
@@ -93,7 +91,12 @@ class App extends Component {
                 >
                   {" "}
                   @tarekhassan{" "}
+                  
                 </a>
+                <div className='has-text-white'>
+                <a href='https://paypal.me/tarekhassan410'>A small donation would help me improve more 
+                tools for developers. Donate here.</a>
+                </div>
                 <div className="is-grouped has-text-centered">
                   <a
                     className="button github-button"
@@ -141,22 +144,21 @@ class App extends Component {
                     Git commands
                   </button>
                 )}
-                {this.state.source === 'data'? 
-              <button
-              onClick={this.setDataToVS}
-              className="button is-link is-active is-medium"
-            >
-              VS Code shortcuts
-            </button>
-            :
-            <button
-                  onClick={this.setDataToVS}
-                  className="button is-link is-outlined is-medium"
-                >
-                  VS Code shortcuts
-                </button>  
-              }
-                
+                {this.state.source === "data" ? (
+                  <button
+                    onClick={this.setDataToVS}
+                    className="button is-link is-active is-medium"
+                  >
+                    VS Code shortcuts
+                  </button>
+                ) : (
+                  <button
+                    onClick={this.setDataToVS}
+                    className="button is-link is-outlined is-medium"
+                  >
+                    VS Code shortcuts
+                  </button>
+                )}
               </div>
             </div>
           </div>
