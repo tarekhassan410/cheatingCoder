@@ -123,7 +123,7 @@ class App extends Component {
                   onChange={this.filterList}
                   className="input is-primary is-medium is-rounded"
                   type="email"
-                  placeholder="Search commands 'Cut', 'Copy', 'Delete, 'Toggle' etc "
+                  placeholder="Search git commands 'init', 'status', 'push' etc or VSCode shortcuts 'cut', 'copy'"
                 />
                 <span className="icon is-small is-left">
                   <i className="fas fa-search" />
